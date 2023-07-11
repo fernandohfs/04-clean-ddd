@@ -8,9 +8,7 @@ interface AnswerQuestionInput {
 }
 
 export class AnswerQuestionUseCase {
-  constructor(
-    private answersRepository: AnswersRepository
-  ) { }
+  constructor(private answersRepository: AnswersRepository) { }
 
   public async execute({ instructorId, questionId, content }: AnswerQuestionInput) {
     const answer = new Answer({ content, authorId: instructorId, questionId });
