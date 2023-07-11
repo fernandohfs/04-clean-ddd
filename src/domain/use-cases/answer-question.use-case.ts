@@ -1,4 +1,4 @@
-import { Answer } from "../entities/Answer";
+import { Answer } from "../entities/answer";
 import { AnswersRepository } from "../repositories/answers.repository";
 
 interface AnswerQuestionInput {
