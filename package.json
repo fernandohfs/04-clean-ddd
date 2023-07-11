@@ -1,4 +1,13 @@
 {
+  "name": "04-clean-ddd",
+  "version": "1.0.0",
+  "description": "Design dirigido à domínio",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.4.1",
     "typescript": "^5.1.6",
