@@ -1,4 +1,3 @@
-import { test, expect } from 'vitest';
 import { AnswerQuestionUseCase } from './answer-question.use-case';
 import { AnswersRepository } from '../repositories/answers.repository';
 import { Answer } from '../entities/answer';
