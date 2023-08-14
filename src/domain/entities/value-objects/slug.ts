@@ -1,20 +1,20 @@
 export class Slug {
-  public value: string;
+  public value: string
 
   constructor(value: string) {
-    this.value = value;
+    this.value = value
   }
 
   /**
    * Receives a string and normalize it as a slug
-   * 
+   *
    * Example: "An example title" => "an-example_title"
-   * 
+   *
    * @param text {string}
    */
   static createFromText(text: string) {
     const slugText = text
-      .normalize("NFKD")
+      .normalize('NFKD')
       .toLocaleLowerCase()
       .trim()
       .replace(/\s+/g, '-')
@@ -23,6 +23,6 @@ export class Slug {
       .replace(/--+/g, '-')
       .replace(/-$/g, '')
 
-    return new Slug(slugText);
+    return new Slug(slugText)
   }
 }
