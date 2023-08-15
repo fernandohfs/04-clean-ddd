@@ -44,11 +44,11 @@ export class Question extends Entity<QuestionProps> {
   }
 
   get isNew(): boolean {
-    return dayjs().diff(this.createdAt, 'days') <= 3
+    return dayjs().diff(this.props.createdAt, 'days') <= 3
   }
 
   get excerpt() {
-    return this.content.substring(0, 120).trimEnd().concat('...')
+    return this.props.content.substring(0, 120).trimEnd().concat('...')
   }
 
   private touch() {

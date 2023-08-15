@@ -32,7 +32,7 @@ export class Answer extends Entity<AnswerProps> {
   }
 
   get excerpt() {
-    return this.content.substring(0, 120).trimEnd().concat('...')
+    return this.props.content.substring(0, 120).trimEnd().concat('...')
   }
 
   private touch() {
