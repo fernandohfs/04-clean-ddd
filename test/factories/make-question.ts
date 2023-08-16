@@ -6,6 +6,8 @@ import {
   QuestionProps,
 } from '@/domain/forum/enterprise/entities/question'
 
+// Partial transforma TODOS os atributos de uma interface para opcional
+
 export function makeQuestion(
   override: Partial<QuestionProps> = {},
   id?: UniqueEntityID,
