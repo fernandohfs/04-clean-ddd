@@ -1,11 +1,11 @@
 import { Question } from '../../enterprise/entities/question'
 import { QuestionsRepository } from '../repositories/questions.repository'
 
-interface GetQuestionBySlugInput {
+interface GetQuestionBySlugUseCaseInput {
   slug: string
 }
 
-interface GetQuestionBySlugOutput {
+interface GetQuestionBySlugUseCaseOutput {
   question: Question
 }
 
@@ -14,7 +14,7 @@ export class GetQuestionBySlugUseCase {
 
   public async execute({
     slug,
-  }: GetQuestionBySlugInput): Promise<GetQuestionBySlugOutput> {
+  }: GetQuestionBySlugUseCaseInput): Promise<GetQuestionBySlugUseCaseOutput> {
     const question = await this.questionsRepository.findBySlug(slug)
 
     if (!question) {
