@@ -12,7 +12,7 @@ describe('Get Question By Slug', () => {
     sut = new GetQuestionBySlugUseCase(inMemoryQuestionsRepository)
   })
 
-  test('it should be get a question by slug', async () => {
+  test('it should be able to get a question by slug', async () => {
     const newQuestion = makeQuestion({
       slug: Slug.create('example-question'),
     })
