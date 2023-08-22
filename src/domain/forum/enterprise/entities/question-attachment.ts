@@ -14,4 +14,10 @@ export class QuestionAttachment extends Entity<QuestionAttachmentProps> {
   get attachmentId() {
     return this.props.attachmentId
   }
+
+  static create(props: QuestionAttachmentProps, id?: UniqueEntityID) {
+    const attachment = new QuestionAttachment(props, id)
+
+    return attachment
+  }
 }
